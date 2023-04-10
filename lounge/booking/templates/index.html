@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block head %}
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'CSS/lounge1.css' %}">
+</head>
+{% endblock %}
+
+{% block body %}
+
+<html lang="en">
+<body>
+<!--Section 1-->
+<section class="top">
+    <h1 class="display-1 clight me-2 ms-2 text-center">Welcome to KGS Lounge </h1>
+<div class="bg  text-dark pt-5 pb-5">
+    <div class="text-center  pt-5 pb-5">
+        <p class="fs-4 mt-3">Star Making reservations now</p>
+        <a type="button" class="btn btn-primary shadow  mt-5" href="{% url 'Accept' %}">Make Reservation</a>
+    </div>
+</div>
+    <br>
+</section>
+<!-- Section 1 end-->
+<!-- Section 2 -->
+    <img class="lounge1" src="{% static 'images/lounge1.jpg' %}">
+        <div class="main">
+
+            <section class="section2">
+                <div class="about">
+                    <h1>
+                       Why Come Here?
+                    </h1>
+                    <h5>
+                        Because we care about you... all the time...
+                    </h5>
+                    <p>
+                        Welcome to KGS Lounge, where we provide our customers with an unforgettable experience.
+                        Here are just a few reasons why you should come to our lounge:
+
+Firstly,  our lounge is designed with your comfort in mind. Our plush seating and low lighting create a relaxed atmosphere where you can unwind and socialize with friends or colleagues. Our music selection is carefully curated to enhance the ambiance and keep you entertained throughout your visit.
+
+Thirdly, we host regular events and live music performances, providing our customers with an exciting and diverse entertainment experience. Whether you're looking for a night out with friends or a fun date night, KGS Lounge has something for everyone.
+
+Lastly, our friendly and attentive staff are committed to providing exceptional customer service. From the moment you step into our lounge, you'll be greeted with a warm smile and made to feel welcome. Our team is always on hand to ensure that your visit is as enjoyable as possible.
+
+So, what are you waiting for? Come and experience KGS Lounge for yourself and discover why we're the go-to destination for those looking for a great night out.
+                    </p>
+                    <a type= "button" class="button" href="{% url 'contact' %}"> Chat With Us </a>
+                </div>
+
+            </section>
+        </div>
+<section class="background1">
+    <img class="background" src="{% static 'images/reserved.jpeg' %}"  alt="reserved">
+</section>
+<!--Section 2 End-->
+<br>
+</body>
+</html>
+{% endblock %}
+
+

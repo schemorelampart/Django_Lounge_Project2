@@ -1,0 +1,7 @@
+
+img #reserved.jpeg{
+                    width: 1600px;
+                    max-width: 95%;
+                    display: flex;
+                    border-radius: 35px;
+}

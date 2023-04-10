@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block head %}
+<title>Edit Appointment</title>
+{% endblock %}
+{% block body %}
+
+
+
+
+{% if user.is_authenticated %}
+<!--if 24hrs before nobat-->
+{% if delta24 == True %}
+<h1 class="text-center  mt-3">Edit Reservation</h1>
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <form method="post" action="{% url 'userUpdate' id %}" class="me-2 ms-2" required>
+        {% csrf_token %}
+
+        <!--input for reservation-->
+        <div>
+            <h3 class="">Reservation Type:</h3>
+            <select class="form-select fs-3" name="service">
+                <option value="Table Reservations">Table Reservations</option>
+                <option value="Booth Reservations">Booth Reservations</option>
+                <option value="Couch Reservations">Couch Reservations</option>
+                <option value="Special Occasion">Special Occasion</option>
+            </select>
+        </div>
+            <!--input for day-->
+            <div class="mt-3">
+                <h3 class="">Select Day:</h3>
+                <select class="form-select fs-3" name="day">
+                    {% for validateWeekday in validateWeekdays %}
+                    <option value="{{validateWeekday}}">{{validateWeekday}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <br/>
+            <button type="submit" class="btn btn-primary text-white">Continue</button>
+
+    </form>
+
+</div>
+<!--else if its 24hrs before changing-->
+{% else %}
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black m-5 text-center fPersian">
+    <h1 class="text-danger">You can only change reservations up to 24 hours prior to the date!</h1>
+    <a href="{% url 'userPanel' %}" class="btn btn-primary mt-5">Return To User Panel</a>
+</div>
+
+{% endif %}
+
+
+{% else %}
+
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+    <h1 class="p-2  me-3">You Are Not Signed in!</h1>
+    <a href="{% url 'register' %}" class="btn btn-primary shadow text-center">Sign in</a>
+</div>
+
+{% endif %}
+
+
+{% endblock %}
+
+</html>

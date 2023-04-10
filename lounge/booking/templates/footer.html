@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+</head>
+
+<body>
+
+<!-- HTML code for footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+           <div class="footer-content">
+        <p>Copyright © 2023
+          <a href="https://www.kgslounge.com">KGS Lounge</a>
+        </p>
+
+
+          <a href="https://www.twitter.com/">
+                          <img src="{% static 'images/twitter.png' %}" alt="Twitter" class="rounded-circle" width="50">
+                          </a>
+          <a href="https://www.instagram.com/kgslounge1/">
+                          <img src="{% static 'images/instagram.png' %}" alt="Instagram" class="rounded-circle" width="50">
+                          </a> <br>
+          <a href="https://www.facebook.com/profile.php?id=100091525928907">
+                          <img src="{% static 'images/facebook.png' %}" alt="Facebook" class="rounded-circle" width="50">
+                          </a>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</footer>
+<style>
+/* CSS code for footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  list-style: none;
+  text-align: right;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:first-child {
+  margin-left: 0;
+}
+
+.social-icons a {
+  display: block;
+  color: #555;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+  border-radius:50%;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+</style>
+
+</body>
+</html>
+
+
+

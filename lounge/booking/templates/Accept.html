@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% load static %}
+
+<head>
+	<title>Accept or Reject</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+
+
+{% block body %}
+<br>
+
+<html>
+<body>
+  <div id="container">
+    <h1 class="blink">A payment of $15 will be collected after completing the reservation form to secure your booking.</h1>
+
+    <br>
+
+    <form>
+      <label>
+        <input type="checkbox" id="terms-agree" name="terms-agree" required>
+        I have read and agree to the <a href="{% url 'terms' %}">Terms and Conditions</a>.
+      </label>
+      <br><br>
+      <button class="blue" type="button" onclick="acceptTerms()">Proceed to reservation</button>
+      <br><br>
+      <button class="red"  type="button" onclick="rejectTerms()">Go back</button>
+    </form>
+
+  </div>
+
+  <script>
+    function acceptTerms() {
+      if (document.getElementById("terms-agree").checked) {
+        window.location.href = "{% url 'booking' %}"; // URL of the booking page
+      } else {
+        alert("Please accept the terms and conditions before proceeding.");
+      }
+    }
+
+    function rejectTerms() {
+      window.location.href = "{% url 'index' %}"; // URL of the index page
+    }
+  </script>
+
+
+
+    <style>
+
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+      #container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ddd;
+      }
+
+      @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+      }
+
+      .blink {
+      animation: blink 1s infinite;
+      }
+      h1{
+        font-size: 32px;
+        text-align: center;
+        color: red;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      #accept-terms {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      #reject-terms {
+        margin-top: 20px;
+        text-align: center;
+
+    blue{
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    button.red{
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    button.blue {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+  </style>
+
+
+
+
+
+</body>
+</html>
+
+{% endblock %}
+
+
+
+

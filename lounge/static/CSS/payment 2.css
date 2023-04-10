@@ -1,0 +1,47 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+form {
+	max-width: 600px;
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #ccc;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+input[type="submit"] {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: #0069d9;
+}
+.card-wrapper {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}

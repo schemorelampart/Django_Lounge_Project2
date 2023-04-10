@@ -1,0 +1,143 @@
+*body{
+padding-top:20px;
+padding-bottom:20px;
+padding-left:20px;
+padding-right: 20px;
+}
+
+
+.top{
+background-image:url(../images/giphy.gif);
+background-size:cover;
+margin:0px;
+border-radius: 10px;
+width: 100%;
+#background:white;
+
+}
+
+.top p{
+color:white;
+}
+
+.top h1{
+padding-right:20px:
+padding-left:20px;
+color: red;
+}
+
+
+
+.background{
+    height:708px;
+    padding: 5px;
+    padding-right: px;
+    margin: 5px;
+    border-radius: 30px;
+    width: 100%;
+
+}
+
+section2{
+    background-color: #191919;
+    padding: 30px;
+    box-sizing: border-box;
+    margin:0px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+.lounge1{
+    height:708px;
+    width: 1000px;
+    padding: 5px;
+    margin:0px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+/* Add media query to adjust styles for smaller screens */
+@media only screen and (max-width: 375px) {
+
+
+
+.main{
+      width: 100%
+      margin: 1 auto;
+      display: flex;
+      align-items: auto ;
+      padding-right:10px:
+      padding-left:10px;
+       justify-content: center;
+
+}
+}
+.main h1{
+         padding: 10px;
+         color: black;
+         font-size; 19px;
+         margin:0px;
+         border-radius: 10px;
+         width: 100%;
+          justify-content: center;
+
+
+
+}
+.main h5{
+         padding: 10px;
+         color: red;
+         font-size: 18px;
+         text-transform: capitalize;
+
+}
+.main p{
+        margin:0px;
+         width: 100%;
+         color: black;
+         padding: 10px;
+         border-outline:1px;
+         justify-content: center;
+         font-size: 16px;
+         text-transform: ;
+         letter-spacing: 4px;
+         line-height: 25px;
+         margin-bottom: 35px;
+         font-family: times Helvetica;
+
+}
+
+
+.about{
+    width: 850px;
+
+}
+
+
+
+.button{
+    background: Yellow;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 13px 20px;
+    border-radius: 30px;
+    transition: .4s;
+    justify-content: center;
+}
+
+.button:hover{
+    background: transparent;
+    border: 2px solid green;
+    color: red;
+    cursor: pointer;
+
+}
+
+
+
+
+
+

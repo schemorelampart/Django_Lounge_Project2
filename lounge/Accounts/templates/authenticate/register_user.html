@@ -1,0 +1,39 @@
+<title>Sign Up</title>
+{% extends 'layout.html' %}
+{% load static %}
+{% block body %}
+
+
+
+{% if user.is_authenticated %}
+<h1 class="p-2 text-center mb-5 text-warning">Already Signed in!</h1>
+
+{% else %}
+
+
+<div class="bg-white fPersian">
+<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5">
+     <h1 class="text-black p-3 ">Have An Account With Us?</h1>
+                    </br>
+                    <div>
+                    <a href="{% url 'login' %}" class="btn text-center btn-primary">Sign in Now
+                    </a>
+
+    <br>
+    <br>
+    <h1 class="text-black p-3 ">Sign Up</h1>
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+
+       {{ form.as_p }}
+
+        <br/>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </br>
+
+</form>
+</div>
+<br/><br/><br/>
+</div>
+{% endif %}
+{% endblock %}
